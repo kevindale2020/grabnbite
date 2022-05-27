@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vehicle Type"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#009f7e "
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/forget"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                tools:ignore="UselessParent">
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:backgroundTint="#808080"
+                    android:overlapAnchor="false"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vehicle Color"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#009f7e "
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"/>
+
+            <EditText
+                android:id="@+id/etColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter the vehicle color"
+                android:background="@drawable/forget"
+                android:textColor="#000 "
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="20dp"
+                android:singleLine="true"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/tv_plate_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vehicle Plate Number"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#009f7e "
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"/>
+
+            <EditText
+                android:id="@+id/etNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter the plate number"
+                android:background="@drawable/forget"
+                android:textColor="#000 "
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="20dp"
+                android:singleLine="true"
+                android:layout_marginTop="5dp"/>
+
+            <!-- Doc1 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TIN (Tax Identification Number)"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#009f7e "
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/iconAttach"
+                    android:textColor="#0275d8"
+                    android:onClick="previewFile"
+                    android:clickable="false"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iconAttach"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_attach_file_black_24dp"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnAttach"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button4"
+                android:textColor="#808080"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Attach File"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:letterSpacing="0.2"
+                android:drawableLeft="@drawable/ic_attachment_black_24dp"/>
+            <!-- end -->
+
+            <!-- Doc2 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BIR Form (1902 or 1904)"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#009f7e "
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="20dp"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/file2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/iconAttach2"
+                    android:textColor="#0275d8"
+                    android:onClick="previewFile2"
+                    android:clickable="false"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iconAttach2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_attach_file_black_24dp"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnAttach2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button4"
+                android:textColor="#808080"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Attach File"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:letterSpacing="0.2"
+                android:drawableLeft="@drawable/ic_attachment_black_24dp"/>
+            <!-- end -->
+
+            <!-- Doc3 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Government Issued ID"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#009f7e "
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="20dp"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/file3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/iconAttach3"
+                    android:textColor="#0275d8"
+                    android:onClick="previewFile3"
+                    android:clickable="false"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iconAttach3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_attach_file_black_24dp"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnAttach3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button4"
+                android:textColor="#808080"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Attach File"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:letterSpacing="0.2"
+                android:drawableLeft="@drawable/ic_attachment_black_24dp"/>
+            <!-- end -->
+
+            <!-- Doc3 -->
+            <TextView
+                android:id="@+id/tv_driver_license"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Driver's License"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#009f7e "
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="20dp"/>
+
+            <RelativeLayout
+                android:id="@+id/layout_file4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/file4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/iconAttach4"
+                    android:textColor="#0275d8"
+                    android:onClick="previewFile4"
+                    android:clickable="false"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iconAttach4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_attach_file_black_24dp"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnAttach4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button4"
+                android:textColor="#808080"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Attach File"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:letterSpacing="0.2"
+                android:drawableLeft="@drawable/ic_attachment_black_24dp"/>
+            <!-- end -->
+
+            <ProgressBar
+                android:id="@+id/loading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="380dp"
+                android:layout_height="55dp"
+                android:text="Save"
+                android:textSize="17dp"
+                android:textColor="#fff"
+                android:background="@drawable/button2"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="16dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
